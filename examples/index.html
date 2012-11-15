@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<title>Handlebbbars</title>
+<link rel="stylesheet" href="./assets/css/application.css" />
+</head>
+<body>
+<div id="wrapper">
+  <header role="banner">
+    <select id="page-picker">
+      <option value="1">Page 1</option>
+      <option value="2">Page 2</option>
+      <option value="3">Page 3</option>
+      <option value="4">Page 4</option>
+      <option value="5">Page 5</option>
+      <option value="6">Page 6</option>
+      <option value="7">Page 7</option>
+      <option value="8">Page 8</option>
+      <option value="9">Page 9</option>
+      <option value="10">Page 10</option>
+      <option value="11">Page 11</option>
+      <option value="12">Page 12</option>
+      <option value="13">Page 13</option>
+      <option value="14">Page 14</option>
+      <option value="15">Page 15</option>
+      <option value="16">Page 16</option>
+      <option value="17">Page 17</option>
+      <option value="18">Page 18</option>
+      <option value="19">Page 19</option>
+      <option value="20">Page 20</option>
+      <option value="21">Page 21</option>
+      <option value="22">Page 22</option>
+      <option value="23">Page 23</option>
+      <option value="24">Page 24</option>
+      <option value="25">Page 25</option>
+    </select>
+    <a id="logo" href="./index.html">
+      <img src="./assets/images/logo.png" alt="Handlebbbars" />
+    </a>
+  </header>
+  <div role="main">
+    <aside id="tip">
+      <b>Tip:</b>
+      <span class="for-keyboard">
+        Press <b>J</b> or <b>K</b>
+      </span>
+      <span class="for-touch">
+        Swipe <b>left</b> or <b>right</b>
+      </span>
+      to paginate back or forward.
+    </aside>
+    <ul id="list">
+      <!-- Insert fancy content here. -->
+    </ul>
+  </div>
+</div>
+<footer role="contentinfo">
+  Built by <a href="http://sonspring.com/">Nathan Smith</a>
+  &mdash;
+  Twitter: <a href="http://twitter.com/nathansmith">@nathansmith</a>
+</footer>
+<div id="loading">
+  loading&hellip;
+</div>
+<div id="error">
+  <i>
+    Yikes! Something went wrong.
+  </i>
+  <br />
+  <a href="./index.html">
+    Click here to reload the page&hellip;
+  </a>
+</div>
+<script type="text/x-handlebars" id="_template-list-item">
+  {{#each shots}}
+    <li>
+      <p>
+        <b class="big">
+          {{title}}
+        </b>
+        <img alt="{{title}}" class="frame" style="background-image:url({{image_url}})" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAAEklEQVQIHWP8//8/AzJgJCgAAB+ICPuLaDnAAAAAAElFTkSuQmCC" />
+      </p>
+      <table>
+        <tr>
+          <th>
+            Designer:
+          </th>
+          <td>
+            <b>{{player.name}}</b>
+          </td>
+        </tr>
+        {{#if player.twitter_screen_name}}
+          <tr>
+            <th>
+              Twitter:
+            </th>
+            <td>
+              <a href="http://twitter.com/{{player.twitter_screen_name}}">@{{player.twitter_screen_name}}</a>
+            </td>
+          </tr>
+        {{/if}}
+        {{#if likes_count}}
+          <tr>
+            <th>
+              Likes:
+            </th>
+            <td>
+              {{likes_count}} <span class="mute">&hearts;</span>
+            </td>
+          </tr>
+        {{/if}}
+        {{#if short_url}}
+          <tr>
+            <th>
+              URL:
+            </th>
+            <td>
+              <a href="{{short_url}}">{{short_url}}</a>
+            </td>
+          </tr>
+        {{/if}}
+      </table>
+    </li>
+  {{/each}}
+</script>
+<!--[if gt IE 9]><!-->
+  <script src="./assets/js/zepto.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 9]>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<![endif]-->
+<script src="./assets/js/handlebars.js"></script>
+<script src="./assets/js/application.js"></script>
+</body>
+</html>
