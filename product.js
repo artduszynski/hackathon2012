@@ -3,27 +3,27 @@ var sys = require("sys"),
     url = require("url"),  
     path = require("path"),  
     fs = require("fs");  
-http.createServer(function(request, response) {  
+http.createServer(function(request, res) {  
     var uri = url.parse(request.url).pathname;  
     var filename = path.join(process.cwd(), uri);  
-    path.exists(filename, function(exists) {  
+    fs.exists(filename, function(exists) {  
         if(!exists) {  
-            response.sendHeader(404, {"Content-Type": "text/plain"});  
-            response.write("404 Not Found\n");  
-            response.close();  
+            res.sendHeader(404, {"Content-Type": "text/plain"});  
+            res.write("404 Not Found\n");  
+            res.close();  
             return;  
         }  
         fs.readFile(filename, "binary", function(err, file) {  
             if(err) {  
-                response.sendHeader(500, {"Content-Type": "text/plain"});  
-                response.write(err + "\n");  
-                response.close();  
+                res.sendHeader(500, {"Content-Type": "text/plain"});  
+                res.write(err + "\n");  
+                res.close();  
                 return;  
             }  
-            response.sendHeader(200);  
-            response.write(file, "binary");  
-            response.close();  
+            res.sendHeader(200);  
+            res.write(file, "binary");  
+            res.close();  
         });  
     });  
-}).listen(1337);  
+}).listen(1337, "127.0.0.1");
 sys.puts("Server running at http://localhost:1337/");
