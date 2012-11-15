@@ -2,22 +2,13 @@
 /* Symbolset */
 @font-face {
   font-family: "SSStandardRegular";
-  src: url('/display/common/fonts/symbolset/ss-standard.eot');
-  src: url('/display/common/fonts/symbolset/ss-standard.eot?#iefix') format('embedded-opentype'),
-       url('/display/common/fonts/symbolset/ss-standard.woff') format('woff'),
-       url('/display/common/fonts/symbolset/ss-standard.ttf') format('truetype'),
-       url('/display/common/fonts/symbolset/ss-standard.svg#SSStandardRegular') format('svg');
+  src: url('fonts/symbolset/ss-standard.eot');
+  src: url('fonts/symbolset/ss-standard.eot?#iefix') format('embedded-opentype'),
+       url('fonts/symbolset/ss-standard.woff') format('woff'),
+       url('fonts/symbolset/ss-standard.ttf') format('truetype'),
+       url('fonts/symbolset/ss-standard.svg#SSStandardRegular') format('svg');
   font-weight: normal;
   font-style: normal;
-}
-
-/* Pictos */
-@font-face {
-font-family: 'Pictos';
-src: url('/display/common/fonts/pictos/pictos-web.eot?#iefix') format('embedded-opentype'), 
-	url('/display/common/fonts/pictos/pictos-web.woff') format('woff'), 
-	url('/display/common/fonts/pictos/pictos-web.ttf') format('truetype'),
-	url('/display/common/fonts/pictos/pictos-web.svg#webfontIyfZbseF') format('svg');
 }
 
 /* Common elements for grid structure */
@@ -81,18 +72,15 @@ src: url('/display/common/fonts/pictos/pictos-web.eot?#iefix') format('embedded-
 .clear { clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
 
 /************** Footers *************/
-#footer p.links { word-wrap: break-word; }
+footer p.links { word-wrap: break-word; }
 
-#footer { font-size: .9em; float: left; width: 100%; overflow: hidden; position: relative; text-align: center; }
-#footer ul { clear: left; float: left; list-style: none; margin: 0; padding: 0 0 0 1em; position: relative; left: 50%; text-align: center; }
-#footer ul li { display: block; float: left; list-style: none; margin: 1em 1em 0 0; padding: 0 1em 0 0; position: relative; right: 50%; border-right: 1px solid #000;  }
-#footer ul li:last-child { border: none; }
-#footer p { clear: both; padding-top: 1em; }
+footer { font-size: .9em; float: left; width: 100%; overflow: hidden; position: relative; text-align: center; }
+footer ul { clear: left; float: left; list-style: none; margin: 0; padding: 0 0 0 1em; position: relative; left: 50%; text-align: center; }
+footer ul li { display: block; float: left; list-style: none; margin: 1em 1em 0 0; padding: 0 1em 0 0; position: relative; right: 50%; border-right: 1px solid #000;  }
+footer ul li:last-child { border: none; }
+footer p { clear: both; padding-top: 1em; }
 
 /* Custom Fonts */
-
-.pic { font-family: 'Pictos', sans-serif !important; }
-
 .ss-icon {
   font-family: "SSStandardRegular" !important;
   font-style: normal;
@@ -206,7 +194,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-app
 .simpleFieldset .button { margin-top: .5em; }
 .choiceset fieldset { margin-bottom: .25em; }
 
-body, .content, #hLogo, #headerLinks div, #headersearchform #query, #headersearchform #searchbutton { 
+body, .content, #hLogo, headerLinks div, headersearchform #query, headersearchform #searchbutton { 
     transition:all .2s linear; 
     -o-transition:all .2s linear; 
     -moz-transition:all .2s linear; 
@@ -306,7 +294,7 @@ div.justReleased span.new { display: none; }
 .cloud li { display: inline; padding-right: 1em; }
 
 /* Network Bar */
-#network { border-bottom: 1px solid #E3E3E3; margin: 0; padding: 0; background-image:url(/display/common/images/network/background_aqua_1022.gif); background-repeat: repeat-x; background-color: #FFF; text-align: center; height: 25px; position: absolute; top: 0; left: 0; width: 100%; }
+#network { border-bottom: 1px solid #E3E3E3; margin: 0; padding: 0; background-image:url(../images/network/background_aqua_1022.gif); background-repeat: repeat-x; background-color: #FFF; text-align: center; height: 25px; position: absolute; top: 0; left: 0; width: 100%; }
 #network form { margin: 0 auto; padding: 0; width: 960px; text-align:right; }
 #network form a { margin: 0; padding: 0; width: 134px; border: 0; }
 #network form a img { margin: 0; padding: 0; border: 0; }
@@ -425,7 +413,7 @@ div.buyOption img.appStorePurchase { position: absolute; right: 10px; bottom: 10
 ul.copies { list-style: none; margin: 0 0 -.4em 0; padding: 0; width: 100%; }
 ul.copies li { margin: 0; padding: 0 0 .4em 0; font-size: .9em; }
 div.singlePrintOption, div.multPrintOption { font-size: .8em; width: 240px; margin: -11px 0 10px -2px; padding: 0 25px; }
-div.singlePrintOption p, div.multPrintOption p { padding: 3px 5px 3px 20px; margin: 0; border: 1px solid #e2e2e1; width: 220px; background: url(../../common/images/uppExtraCheck.png) no-repeat 3px 3px; }
+div.singlePrintOption p, div.multPrintOption p { padding: 3px 5px 3px 20px; margin: 0; border: 1px solid #e2e2e1; width: 220px; background: url(../images/uppExtraCheck.png) no-repeat 3px 3px; }
 div.otherFormats { background-color: #eee; border: 1px solid #E2E2E1; display: block; margin:0 0 10px; padding: 7px; position: relative; }
 div.otherFormats p { margin: 0; font-weight: bold; }
 #messageInstructions { width: 400px !important; }
@@ -472,8 +460,8 @@ div.singlePrintOption div.moreInformationText p { margin-top: 10px;}
 div.buyMore p.pricing { margin-top: 2em; text-align: right; white-space :nowrap; vertical-align: middle; clear: both; }
 div.buyMore span.priceDefault { margin: 0 0 0 1em; padding: 0; text-decoration: line-through; }
 div.buyMore span.priceDiscounted { margin: 0 0 0 1em; padding: 0; font-weight: bold; }
-div.buyMore div#bundleImages { float: left; margin: 0; padding: 0; background: url(../../common/images/uppBundleJoiner.png) no-repeat 56px 30px; }
-div.buyMore3 div#bundleImages { float: left; margin: 0; padding: 0; background: url(../../common/images/uppBundleJoiner3.png) no-repeat 56px 30px; }
+div.buyMore div#bundleImages { float: left; margin: 0; padding: 0; background: url(../images/uppBundleJoiner.png) no-repeat 56px 30px; }
+div.buyMore3 div#bundleImages { float: left; margin: 0; padding: 0; background: url(../images/uppBundleJoiner3.png) no-repeat 56px 30px; }
 div.buyMore div#bundleImages .product, div.buyMore3 div#bundleImages .product { vertical-align: bottom; }
 div.buyMore div#bundleImages .right, div.buyMore3 div#bundleImages .right { margin-left: 30px; }
 div.buyMore .bundleJoiner { font-size: 3em; padding: 0 3px; float: left;}
@@ -509,16 +497,16 @@ div#eFormatsInstructions { height: 300px; }
 div.videoStoreProduct #coverCol { background-color: #f9f9f9; border: 1px solid #c7c8ca; margin-bottom: 1em; width: 100% !important; }
 div.videoStoreProduct #coverCol p.textButton { clear: none; float: left; margin-left: 1.5em !important; }
 div.videoStoreProduct div.addthis_toolbox { clear: none; float: right; }
-#playerHolder { float: left; width: 600px; background: #d9d9d9 url(/display/common/images/video_player/ajax-loader.gif) no-repeat 82px center; overflow: auto; overflow-y: hidden;  margin-right: -10px; margin-bottom: 15px; }
+#playerHolder { float: left; width: 600px; background: #d9d9d9 url(../images/video_player/ajax-loader.gif) no-repeat 82px center; overflow: auto; overflow-y: hidden;  margin-right: -10px; margin-bottom: 15px; }
 #vidBasket { width: 384px; height: 308px; background-color: transparent; position: relative; float: left; z-index: 5; }
 #vidPlaylist { background-color: #666; width: 216px; margin: 0; padding: 0; float: right; }
-#vidPlaylist li { list-style-type: none; padding: .7em 0; width: 100%; background: #ededed url(/display/common/images/buttons/vidPlaylistBGoff.png) repeat-x 0 bottom; font-size: .9em; margin: 0 2px 0 0; border-bottom: 1px solid #c7c8ca; }
+#vidPlaylist li { list-style-type: none; padding: .7em 0; width: 100%; background: #ededed url(../images/buttons/vidPlaylistBGoff.png) repeat-x 0 bottom; font-size: .9em; margin: 0 2px 0 0; border-bottom: 1px solid #c7c8ca; }
 .ie7 #playerHolder { display: block; overflow: hidden; }
 .ie7 #vidPlaylist { float: right; width: 216px; }
 .ie7 #vidPlaylist li  { margin-left: 0px; }
 .ie6 #playerHolder { width: 590px; }
 .ie6 #vidPlaylist { float: right; width: 203px; }
-#vidPlaylist li.on { background: #fff url(/display/common/images/buttons/vidPlaylistBG.png) repeat-x 0 bottom; }
+#vidPlaylist li.on { background: #fff url(../images/buttons/vidPlaylistBG.png) repeat-x 0 bottom; }
 #vidPlaylist li a { font-weight: bold; text-decoration: none; line-height: 1.1em; padding: .7em;  display: block; }
 /* Throw them off the page until js loads */
 #vidPlaylist li a { margin-left: -1000px; }
@@ -747,7 +735,7 @@ div.accountAddresses .button {margin-top: 10px;}
 
 /* Account Digital show/hide content */
 .accountProductsLesson { display: inline-block; font-weight: bold; line-height: 1.2em; }
-p.qt {background: url(/display/common/images/icons/quicktime_16.png) no-repeat 0em 2px; padding-left: 1.6em;}
+p.qt {background: url(../images/icons/quicktime_16.png) no-repeat 0em 2px; padding-left: 1.6em;}
 .savedProducts .productList img.product { margin-bottom: 0;}
 .toggleBlock, .hideClass { display: none;}
 .accountIndex .toggleBlock { margin: 0 0 0 5em; padding: 0; position: relative; float: left; }
@@ -1246,8 +1234,8 @@ div#content.author div.authorheader p.rssSubscribe img { margin: 0; padding: 0 1
 .podcasts .list p.latest { color: #999; font-size: 87%; }
 .podcasts .list li { padding-left: 20px; margin: 0 0 0.5em 0; line-height: 15px; font-size: 87%; }
 
-.podcasts li.audio, .podcasts p.audio { background: url(../../common/images/icons/podcast_audio.png) top left no-repeat; }
-.podcasts li.video, .podcasts p.video { background: url(../../common/images/icons/podcast_video.png) top left no-repeat; }
+.podcasts li.audio, .podcasts p.audio { background: url(../images/icons/podcast_audio.png) top left no-repeat; }
+.podcasts li.video, .podcasts p.video { background: url(../images/icons/podcast_video.png) top left no-repeat; }
 
 /* Channel */
 .podcasts.channel td.date { white-space: nowrap; }
